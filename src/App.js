@@ -1,11 +1,15 @@
 import './App.css';
-import { GarageSchedule } from './components/GarageSchedule';
+import { EnergySchedule } from './components/EnergySchedule';
+// import { GarageSchedule } from './components/GarageSchedule';
+// import { StairsSchedule } from './components/StairsSchedule';
 
 function App() {
   return (
     <div className="App">
       <main>
-        <GarageSchedule />
+        {/* <GarageSchedule /> */}
+        {/* <StairsSchedule /> */}
+        <EnergySchedule />
       </main>
     </div>
   );
