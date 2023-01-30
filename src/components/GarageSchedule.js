@@ -16,17 +16,22 @@ const MONTHS = [
   "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"
 ];
 
-export function ScheduleTable({ year = 2023, numberOfApartments = 6, firstApartment = 1 }) {
+export function GarageSchedule({ year = 2023, numberOfApartments = 6, firstApartment = 1 }) {
   return (
     <div>
-      <h1>ESCALAS PARA LIMPEZA DE TODAS AS GARAGENS {year}</h1>
+      <p>
+        PREZADOS MORADORES, <br /><br />
+        COMO ACUMULAM MUITOS PANFLETOS E LIXOS QUE O VENTO TRAZ PARA O PRÉDIO, EXISTE A NECESSIDADE DE ZELAR PELA LIMPEZA DAS GARAGENS E CALÇADAS, SENDO ASSIM, A LIMPEZA SERÁ REALIZADA SEMANALMENTE, PELO APTO CORRESPONDENTE NA ESCALA.
+        * QUANDO ORGANIZAR FESTAS NA GARAGEM O APTO RESPONSÁVEL PELA FESTA, POR FAVOR RETIRAR OS LIXOS RESTANTES.
+      </p>
+      <h2>ESCALAS PARA LIMPEZA DE TODAS AS GARAGENS {year}</h2>
       <div className="grid grid-cols-2">
         {new Array(12).fill(0).map((_, index) => {
           const saturdays = getAllSaturdays(year, index);
           return (
             <div className={`grid grid-cols-4 ${saturdays.length === 4 ? 'grid-rows-4' : 'grid-rows-5'} border border-black`} key={index}>
               <div className={`${saturdays.length === 4 ? 'row-span-4' : 'row-span-5'} border border-black place-content-around grid`}>
-                  <span className="items-center">
+                <span className="items-center">
                   {MONTHS[index]}
                 </span>
               </div>

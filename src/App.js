@@ -1,13 +1,11 @@
 import './App.css';
-import { ScheduleTable } from './components/ScheduleTable';
-import { TopMessage } from './components/TopMessage';
+import { GarageSchedule } from './components/GarageSchedule';
 
 function App() {
   return (
     <div className="App">
-      <TopMessage />
       <main>
-        <ScheduleTable />
+        <GarageSchedule />
       </main>
     </div>
   );
